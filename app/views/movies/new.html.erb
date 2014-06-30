@@ -1,5 +1,7 @@
 <h1>Movies#new</h1>
 
+<%= @movie.errors.full_messages %>
+
 <%= form_for @movie do |f| %>
   <p>
     <%= f.label :title %>
