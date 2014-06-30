@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+
+.poster {
+  display: inline-block;
+  width: 20%;
+}
+
+.poster img:hover {
+  -webkit-transform: rotate(10deg);
+}

@@ -6,9 +6,9 @@ class PosterUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
-  # dirty hack
+  # less dirty hack
   begin
-    include Cloudinary::CarrierWave #if Rails.env.production?
+    include Cloudinary::CarrierWave if Rails.env.production?
   rescue
     raise if Rails.env.production?
   end

@@ -2,9 +2,9 @@
 
 
 <% @movies.each do |movie| %>
-  <div>
+  <div class="poster">
     <p><%= movie.title %></p>
     <%= image_tag movie.poster_url(:thumb) if movie.poster? %>
-    <%= link_to 'delete', movie, :method => :delete %>
+    <%= link_to 'delete', movie, :method => :delete, :data => { :confirm => "I am sure???? " } %>
   </div>
 <% end %>
