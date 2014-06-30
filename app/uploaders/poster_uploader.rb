@@ -8,8 +8,9 @@ class PosterUploader < CarrierWave::Uploader::Base
 
   # dirty hack
   begin
-    include Cloudinary::CarrierWave if Rails.env.production?
-  rescue LoadError
+    include Cloudinary::CarrierWave #if Rails.env.production?
+  rescue
+    raise if Rails.env.production?
   end
 
   # Choose what kind of storage to use for this uploader:
