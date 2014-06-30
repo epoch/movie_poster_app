@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'carrierwave'
 # image post processing
 gem 'mini_magick'
-
+# cloud storage
 gem 'cloudinary'
 
 
