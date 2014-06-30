@@ -27,6 +27,8 @@ gem 'carrierwave'
 # image post processing
 gem 'mini_magick'
 
+gem 'cloudinary'
+
 
 
 
