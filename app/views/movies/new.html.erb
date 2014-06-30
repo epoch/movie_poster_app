@@ -1,0 +1,18 @@
+<h1>Movies#new</h1>
+
+<%= form_for @movie do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :poster %>
+    <%= f.file_field :poster %>
+    <%= f.hidden_field :poster_cache %>
+  </p>
+  <p>
+    <%= f.text_field :remote_poster_url %>
+  </p>
+  <%= f.button 'Create' %>
+<% end %>
