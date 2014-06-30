@@ -29,6 +29,7 @@ gem 'mini_magick'
 # cloud storage
 gem 'cloudinary'
 
+gem 'rails_12factor', group: :production
 
 
 
