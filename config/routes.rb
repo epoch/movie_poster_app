@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :movies, :except => [:destroy]
+  resources :movies
   root :to => 'movies#index'
 
 end

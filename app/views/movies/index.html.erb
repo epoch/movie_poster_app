@@ -5,5 +5,6 @@
   <div>
     <p><%= movie.title %></p>
     <%= image_tag movie.poster_url(:thumb) if movie.poster? %>
+    <%= link_to 'delete', movie, :method => :delete %>
   </div>
 <% end %>
