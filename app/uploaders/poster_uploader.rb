@@ -2,20 +2,10 @@
 
 class PosterUploader < CarrierWave::Uploader::Base
 
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave if Rails.env.production?
 
-  # less dirty hack
-  begin
-    include Cloudinary::CarrierWave if Rails.env.production?
-  rescue
-    raise if Rails.env.production?
-  end
-
-  # Choose what kind of storage to use for this uploader:
   storage :file if Rails.env.development?
-  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
