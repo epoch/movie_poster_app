@@ -10,7 +10,19 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery_ujs
 //= require jquery
-//= require turbolinks
+//= require jquery_ujs
+//= require velocity
+//= require velocity.ui
 //= require_tree .
+
+
+$(document).ready(function() {
+
+    $('.list').velocity("transition.slideUpIn", 1000).delay(750)
+
+    $('.poster').on('click', function() {
+      $(this).velocity("callout.shake", 500);
+    });
+
+});
