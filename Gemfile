@@ -29,6 +29,8 @@ gem 'mini_magick'
 # cloud storage
 gem 'cloudinary'
 
+gem 'dotenv', group: [:development, :test]
+
 gem 'rails_12factor', group: :production
 
 
